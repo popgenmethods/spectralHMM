@@ -101,7 +101,7 @@ Every line of the output that starts with a '#' denotes logging information. The
 
 If the file `spectralHMM.jar` does not exist, Building from downloaded sourcecode is necessary.
 
-Before the sourcecode can be compiled, the libraries detailed in the section [EXTERNAL LIBRARIES](#EXTERNAL-LIBRARIES) have to be downloaded.
+Before the sourcecode can be compiled, the libraries detailed in the section [REQUIREMENTS](#REQUIREMENTS) have to be downloaded.
 
 Then in the `main_dir` (the top level directory) execute the command:
 
