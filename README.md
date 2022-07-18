@@ -7,7 +7,6 @@
 * [USAGE](#USAGE)
 * [EXAMPLES](#EXAMPLES)
 * [BUILD](#BUILD)
-* [EXTERNAL LIBRARIES](#EXTERNAL-LIBRARIES)
 * [CONTACT](#CONTACT)
 * [VERSION HISTORY](#VERSION-HISTORY)
 
@@ -26,7 +25,15 @@ The source code is released under the GNU General Public License, version 3. The
 
 `SpectralHMM` is implemented in java, so a recent version of the java virtual machine (and possibly the java compiler) is required. The program was developed and tested under JDK/JSE 1.6. Furthermore, the scripts to build and run the program need python (any version greater than 2.5 should work).
 
-When compiling the sourcecode, external libraries are required. For details, see section [EXTERNAL LIBRARIES](#EXTERNAL-LIBRARIES).
+Furthermore, The following libraries (jar-files) are required to run the software or compile the sourcecode:
+- `JSAP-2.1.jar`.
+	Download from http://sourceforge.net/projects/jsap/files/jsap/2.1/ (alt: http://www.martiansoftware.com/jsap/).
+- `arpack_combined_all.jar`.
+	Download from at http://en.sourceforge.jp/projects/sfnet_f2j/releases/ .
+- `lapack_simple.jar`.
+	Download `jlapack-0.8.tgz` from http://www.netlib.org/java/f2j/ and unpack. lapack_simple.jar can be found in this archive.
+
+These jar files (or a symbolic link to the files) have to be put into the sub-directory `main_dir/spectralHMM_lib/` (here `main_dir` denotes the top-level directory). If it is necessary to specify custom paths to these libraries, then the build instructions and the scripts `build.py` and `runSpectralHMM.py` have to be changed accordingly.
 
 #### USAGE:
 
@@ -34,7 +41,7 @@ Download the content of this repository ([https://github.com/popgenmethods/spect
 
 If the file `spectralHMM.jar` does not exist in the `main_dir` (the top level directory), building the sourcecode is necessary. Follow steps in section [BUILD](#BUILD) the compile the sourcecode.
 
-In the `main_dir` (the top level directory), execute the python script to run the software with the command
+Otherwise, iIn the `main_dir` (the top level directory), execute the python script to run the software with the command
 
 ```
 python runSpectralHMM.py <arguments>
@@ -104,19 +111,7 @@ python build.py
 
 to compile the sourcecode and create the jar-file: `spectralHMM.jar`
 
-Once the java-executable `spectralHMM.jar` is created, see [USAGE](#USAGE) for instructions on how to build the program
-
-#### EXTERNAL LIBRARIES
-
-The following libraries (jar-files) are required when compiling the sourcecode:
-- `JSAP-2.1.jar`.
-	Download from http://sourceforge.net/projects/jsap/files/jsap/2.1/ (alt: http://www.martiansoftware.com/jsap/).
-- `arpack_combined_all.jar`.
-	Download from at http://en.sourceforge.jp/projects/sfnet_f2j/releases/ .
-- `lapack_simple.jar`.
-	Download `jlapack-0.8.tgz` from http://www.netlib.org/java/f2j/ and unpack. lapack_simple.jar can be found in this archive.
-
-These jar files (or a symbolic link to the files) have to be put into a directory `main_dir/spectralHMM_lib/` (here `main_dir` denotes the top-level directory). If it is necessary to specify custom paths to these libraries, then the build instructions and the scripts `build.py` and `runSpectralHMM.py` have to be changed accordingly.
+Once the java-executable `spectralHMM.jar` is created, see [USAGE](#USAGE) for instructions on how to run the program.
 
 #### CONTACT
 
